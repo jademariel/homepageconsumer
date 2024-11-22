@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image } from "react-native";
 import HomeScreen from "./screens/HomeScreen";
-import ProductScreen from "./screens/ProductScreen";
+import MarketScreen from "./screens/MarketScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 
 const Tab = createBottomTabNavigator();
@@ -21,7 +21,7 @@ export default function App() {
               iconSource = focused
                 ? require("./assets/images/home.png")
                 : require("./assets/images/home1.png");
-            } else if (route.name === "Product") {
+            } else if (route.name === "Marketplace") {
               iconSource = focused
                 ? require("./assets/images/product.png")
                 : require("./assets/images/product1.png");
@@ -58,7 +58,7 @@ export default function App() {
           component={HomeScreen}
           options={{ headerShown: false }}
         />
-        <Tab.Screen name="Product" component={ProductScreen} />
+        <Tab.Screen name="Marketplace" component={MarketScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>

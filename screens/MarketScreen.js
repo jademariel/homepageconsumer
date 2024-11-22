@@ -1,15 +1,15 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const ProductScreen = () => {
+const MarketScreen= () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>This is the Product Screen!</Text>
+      <Text style={styles.text}>This is the Marketplace Screen!</Text>
     </View>
   );
 };
 
-export default ProductScreen;
+export default MarketScreen;
 
 const styles = StyleSheet.create({
   container: {

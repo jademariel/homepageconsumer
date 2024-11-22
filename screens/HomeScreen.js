@@ -106,7 +106,7 @@ const HomeScreen = () => {
       {headerVisible && (
         <View style={styles.headerContainer}>
           <View style={styles.greetingContainer}>
-            <Text style={styles.greetingText}>Hello, Jojo!</Text>
+            <Text style={styles.greetingText}>Hello, James David!</Text>
           </View>
         <TouchableOpacity style={styles.helpContainer} onPress={handleNeedHelp}>
             <Image source={require("../assets/images/needhelp.png")} style={styles.helpIcon} />
