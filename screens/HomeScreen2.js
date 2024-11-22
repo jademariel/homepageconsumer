@@ -14,9 +14,9 @@ const HomeScreen = () => {
   const [headerVisible, setHeaderVisible] = useState(true);
 
   const carouselImages = [
-    require("../assets/images/farmnamin1.jpg"),
-    require("../assets/images/farmnamin2.jpg"),
-    require("../assets/images/farmnamin3.jpg"),
+    require("../assets/images/dev1.jpg"),
+    require("../assets/images/dev2.jpg"),
+    require("../assets/images/dev3.jpg"),
   ];
 
   const farmingNews = [
@@ -109,7 +109,7 @@ const HomeScreen = () => {
             <Text style={styles.greetingText}>Hello, Jojo!</Text>
           </View>
         <TouchableOpacity style={styles.helpContainer} onPress={handleNeedHelp}>
-            <Image source={require("../assets/images/needhelp.png")} style={styles.helpIcon} />
+            <Icon name="question-circle-o" size={30} color="#34A853" /> {/* Minimalist outlined question mark icon */}
         </TouchableOpacity>
 
 
@@ -141,13 +141,9 @@ const HomeScreen = () => {
           },
         ]}
       >
-      <Text style={styles.quote}>
-  <Text style={styles.quote}>
-  "To be a farmer is to be a student {"\n"} forever, for  each  day  brings {"\n"} something new."– John Connell
-</Text>
-
-  </Text>
-
+        <Text style={styles.quote}>
+          "To be a farmer is to be a student forever, for each day brings something new." – John Connell
+        </Text>
       </Animated.View>
 
       <ScrollView
@@ -175,6 +171,7 @@ const HomeScreen = () => {
               />
             ))}
           </View>
+          <Text style={styles.carouselCaption}>We Are Team Transfarmers</Text>
         </View>
 
         <View style={styles.newsSection}>
@@ -236,48 +233,42 @@ const styles = StyleSheet.create({
   headerContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
-    //paddingTop: 0,
+    paddingTop: 20,
     paddingHorizontal: 20,
-    //position: "absolute",
-    top: 40,
+    position: "absolute",
+    top: 30,
     width: "100%",
     zIndex: 10,
     backgroundColor: "#fff",
   },
   greetingContainer: {
-    top:10,
     paddingBottom: 10,
-    
   },
   greetingText: {
     fontSize: 24,
-  fontWeight: "bold",
-  color: "#333",
-  marginBottom: 5,
+    fontWeight: "bold",
+    color: "#333",
   },
   helpIconContainer: {
     justifyContent: "center",
   },
   helpIcon: {
-    width: 50,
-    height: 50,
-    
+    width: 40,
+    height: 40,
   },
-  
   quoteContainer: {
-    paddingHorizontal: 4, // Space on both sides
-    paddingVertical: 4, // Adjusts spacing
-    alignItems: "flex-start", // Left-aligns all text within the container
+    paddingHorizontal: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignItems: "center",
   },
   quote: {
-    fontSize: 16,
+    fontSize: 20,
     fontStyle: "italic",
-    color: "#555",
-    textAlign: "left", // Ensures the text is aligned to the left
-    marginBottom: 5,
-    marginLeft: 10,
-    marginRight: 50,
-    lineHeight: 24,
+    color: "#333",
+    textAlign: "justify",
   },
   scrollContent: {
     padding: 20,
@@ -286,16 +277,11 @@ const styles = StyleSheet.create({
   carouselContainer: {
     marginBottom: 20,
     alignItems: "center",
-    height: 250, 
-    top: -15,
   },
   carouselImage: {
-    marginBottom: 20,
-    alignItems: "center",
-    width: 350, // Increased width of the frame
-    height: 210, // Increased height of the frame
-    overflow: "hidden", // Ensures the images do not overflow beyond the frame
-    //borderRadius: 15, 
+    width: 350,
+    height: 210,
+    borderRadius: 10,
   },
   dotsContainer: {
     flexDirection: "row",
@@ -321,10 +307,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   sectionTitle: {
-    fontSize: 20, // Increased font size
-    //fontWeight: bold",
-    marginBottom: 30,
-  
+    fontSize: 22, // Increased font size
+    fontWeight: "bold",
+    marginBottom: 10,
     color: "#333",
   },
   newsSection: {
@@ -372,4 +357,4 @@ const styles = StyleSheet.create({
   trendsSection: {
     marginBottom: 20,
   },
-}); 
+});
